@@ -1,4 +1,5 @@
 function CalculerDate(datePourComparer) {
+  //Dans les cas où on pourrait utiliser Date format:
   function toDateFormat(date) {
     var dateToArray = date.split('-');
     var dateConverted = new Date(dateToArray[0], dateToArray[1] - 1, dateToArray[2]);
@@ -11,7 +12,7 @@ function CalculerDate(datePourComparer) {
 
   document.write('<br>Date du jour: <br/>' + dateJourString);
   document.write('<br>Date de comparasion: <br/>' + datePourComparer);
-
+  document.write('<br>Date Format converted: <br/>' + toDateFormat(datePourComparer));
 
   if (datePourComparer.localeCompare(dateJourString) != 0) {
     	return dateJourString;
